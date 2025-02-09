@@ -12,7 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        misteri: ["Misteri Caps", "sans-serif"],
+        ameda: ["Ameda-Regular", "sans-serif"], // Added Ameda font
+      },
     },
   },
   plugins: [],
 } satisfies Config;
+
+

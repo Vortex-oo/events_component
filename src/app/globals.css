@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,4 +18,86 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@font-face {
+  font-family: 'Misteri Caps';
+  src: url('/fonts/Misteri Caps.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ameda-Regular';
+  src: url('/fonts/Ameda-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* @keyframes glow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 30px rgba(255, 255, 255, 0.8);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 1),
+      0 0 40px rgba(255, 255, 255, 1);
+  }
+} */
+
+.text-glow {
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+@layer base {
+  :root {
+    --pos-x: 11.14%;
+    --pos-y: 140%;
+    --spread-x: 150%;
+    --spread-y: 180.06%;
+    --color-1: #000;
+    --color-2: #08012c;
+    --color-3: #4e1e40;
+    --color-4: #70464e;
+    --color-5: #88394c;
+    --border-angle: 20deg;
+    --border-color-1: hsla(340, 75%, 60%, 0.2);
+    --border-color-2: hsla(340, 75%, 40%, 0.75);
+    --stop-1: 37.35%;
+    --stop-2: 61.36%;
+    --stop-3: 78.42%;
+    --stop-4: 89.52%;
+    --stop-5: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .first_part {
+    padding-top: 2rem;
+  }
+  
+  .second_part {
+    margin-top: 2rem;
+  }
+  
+  button {
+    font-size: 1.25rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-glow {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
 }
